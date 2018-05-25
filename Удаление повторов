@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <limits.h>
+#include <stdlib>
+#include <time.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main(int argc, char** argv) 
+	{
+	int i, j, n, m;
+	char array1[10000], array2[10000];
+	cout << "Enter array lenght" << "\n";
+	cin >> n;
+	for (i = 0; i < n; i++)
+	{
+		cin >> array1[i];
+	}
+	for (m=0; m<=n; m++)
+	{
+		
+		for(i=0; i<n-1; i++)
+			for(j=1; j<n; j++)
+			{
+				if(array1[i]==array1[j])
+					array2[m]=array1[i];
+			}
+		cout << array2[m] << "\n";
+	}
