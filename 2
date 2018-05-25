@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <limits.h>
+#include <cstdlib>
+#include <time.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main(int argc, char** argv) 
+	{
+	int i, n, j;
+	char arrw[100], arrl[100];
+	cout << "Enter your word\n";
+	cin >> arrw;
+	for (i=0; i<n; i++)
+		for (j=1; j<n+1; j++)
+			if (arrw[i]!=arrw[j])
+				{
+					arrl[i] = arrw[j];
+					cout << arrl[i];
+				}
+	}
+  
