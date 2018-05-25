@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <cstdlib>
+#include <time.h>
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char** argv) 
+	{
+	int i, n, s;
+  s:=0;
+  int array[100];
+  for (i=0, i<100, i++)
+     s=s+array[i]*(-1);
+  cout << "Sum = " << s;
+  }
