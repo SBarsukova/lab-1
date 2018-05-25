@@ -1,0 +1,20 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+using namespace std;
+ 
+int main()
+{
+    int dec, bin, mod, sum;
+    cout << "Enter decimal num\n";
+    cin >> dec;
+    
+    while (dec)
+    {
+        mod = dec % 2;
+        dec /= 2;
+        sum +=dec;
+    }
+    
+    cout << sum;
+}
