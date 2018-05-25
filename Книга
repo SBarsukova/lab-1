@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstring>
+
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv)
+
+{
+	int n, k, t, p, i;
+	cout << "Enter num of strings on page\n";
+	cin >> k;
+	if (k<1||k>200)
+		{
+		do
+		{
+			cout << "Try again\n";
+			cin >> k;
+		}
+		while (k<1||k>200);
+		}
+	cout << "Enter string num\n";
+	cin >> n;
+	if (n<1||n>20000)
+		{
+		do
+		{
+			cout << "Try again\n";
+			cin >> n;
+		}
+		while (n<1||n>20000);
+		}
+	i==0;
+	if ((i*k+1)<n)
+		{
+			i++;
+		}
+	cout << "Pade number\n";
+	cout << i+1 <<"\n";
+	cout << "Number of string on page\n";
+	cout << (-(i+1)*k-n);
+}
