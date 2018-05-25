@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <limits.h>
+#include <cstdlib>
+#include <time.h>
+#include <iostream>
+
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) 
+	{
+	int i, n, m, sum, j/*, a = -1000, b = 1000*/;
+	int array[10000];
+	long ltime = time (NULL);
+    int stime = (unsigned int) ltime/2;
+	srand(stime);
+	sum=0;
+	cout << "Enter array lenght more than 100" << "\n";
+	cin >> n;
+	if(n<99)
+	{
+	do
+	{
+		cout << "Try again" << "\n";
+		cin >> n;
+	}while (n<98);
+	}
+	for (i = 0; i < n; i++)
+	{
+		array[i] = rand() % 2001 + (-1000);
+		cout << i << " - " << array[i] << "\n";
+	}	
+/*	for (i = 0; i < n; i++)
+	{
+		cin >> array[i];
+	}
+*/	for (i=0; i<n; i++)
+	{
+		if (array[i]<0)
+			array[i]*= -1;
+		cout << array[i] << "\n";
+		sum+= array[i];	
+	}
+	cout << "sum = " << sum << "\n";
+	}
