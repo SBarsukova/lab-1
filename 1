@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <limits.h>
+#include <cstdlib>
+#include <time.h>
+#include <iostream>
+
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) 
+	{
+	int i, n, min1, min2, j;
+	int array[10000];
+	min1 = INT_MAX;
+	min2 = INT_MAX;
+	long ltime = time (NULL);
+    int stime = (unsigned int) ltime/2;
+	srand(stime);
+	cout << "Enter array lenght more than 100" << "\n";
+	cin >> n;
+/*	do
+	{
+		cout << "Try again" << "\n";
+		cin >> n;
+	}while (n<99);
+	for (i = 0; i < n; i++)
+	{
+		array[i] = rand();
+	}
+*/	
+	for (i = 0; i < n; i++)
+	{
+		cin >> array[i];
+	}
+	cout << "111111111111111111\n";
+	for (i=0; i<n-1; i++)
+	
+		if (array[i]<min1)
+			{
+				min1 = array[i];	
+				array[i] = INT_MAX;
+				cout << min1 << "\n";
+				break;
+			}
+	cout << "22222222222222222222222\n";
+	for (i=0; i<n-1; i++)
+		if (array[i]<min2)	
+			{
+				min2 = array[i];	
+				array[i] = INT_MAX;
+				cout << min2 << "\n";
+				break;
+			}
+	cout << "666666666666666666\n";
+	for (i=0; i<n; i++)
+		cout << array[i] << "\n";
+	cout << "min1 = " << min1 << "\n" << "min2 = " << min2 << "\n";
+	}
